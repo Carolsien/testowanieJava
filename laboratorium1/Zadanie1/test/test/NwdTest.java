@@ -17,12 +17,12 @@ public class NwdTest {
 	
 	@Test
 	public void CheckFirstZero(){
-		test.nwd(0, 9);
+		assertEquals(9, test.nwd(0, 9));
 	}
 	
 	@Test
 	public void CheckSecondZero(){
-		test.nwd(9, 0);
+		assertEquals(9, test.nwd(9, 0));
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
