@@ -6,5 +6,5 @@ Zadania ze strony:
 https://inf.ug.edu.pl/~mmiotk/TAJAVA.html
 
 
-Karolina Rostek
+autor: Karolina Rostek
 
