@@ -50,25 +50,14 @@ public class KontraktTest {
 		System.out.println("test dla 4 cyfr:" + oczekiwana);
 	}
 
-	@Test
+	@Test (expected = NieudanyPsikusException.class)
 	public void nieudanyPsikus() throws NieudanyPsikusException {
-		boolean sprawdz = false;
-		try {
 			kontrakt.HultajChochla(4);
-		} catch (NieudanyPsikusException e) {
-			sprawdz = true;
-		}
-		assertTrue(sprawdz);
 	}
 
-	@Test
-	public void HultajChochlaWyrzucaWyjatek_JednaCyfra() {
-		try {
+	@Test(expected = NieudanyPsikusException.class)
+	public void HultajChochlaWyrzucaWyjatek_JednaCyfra() throws NieudanyPsikusException {
 			kontrakt.HultajChochla(2);
-			fail("Metoda nie dziala");
-		} catch (NieudanyPsikusException e) {
-			assertTrue(true);
-		}
 	}
 
 	@Test(expected = NieudanyPsikusException.class)

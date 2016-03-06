@@ -30,11 +30,6 @@ public class Kontrakt implements Psikus {
 	}
 
 	public Integer HultajChochla(Integer liczba) throws NieudanyPsikusException {
-		boolean czyUjemna = false;
-		if (liczba < 0) {
-			czyUjemna = true;
-			liczba = -liczba;
-		}
 		int ileCyfr = liczba.toString().length();
 		if (ileCyfr == 1)
 			throw new NieudanyPsikusException();
@@ -53,8 +48,6 @@ public class Kontrakt implements Psikus {
 				wynik += liczba.toString().charAt(i);
 		}
 		liczba = Integer.parseInt(wynik);
-		if (czyUjemna)
-			liczba = -liczba;
 		return liczba;
 	}
 
