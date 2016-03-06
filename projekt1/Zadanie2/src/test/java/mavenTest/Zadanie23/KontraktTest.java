@@ -1,8 +1,6 @@
 package mavenTest.Zadanie23;
 
 import static org.junit.Assert.*;
-import static org.hamcrest.Matchers.greaterThanOrEqualTo;
-import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.After;
@@ -24,11 +22,27 @@ public class KontraktTest {
 	}
 
 	@Test
+	public void CyfroKradTest() {
+		int oczekiwana = kontrakt.CyfroKrad(37);
+		assertThat(oczekiwana, anyOf(is(3), is(7)));
+	}
+
+	@Test
+	public void CyfroKradTestNull() {
+		assertThat(kontrakt.CyfroKrad(4), is(nullValue()));
+	}
+
+	@Test
+	public void CyfroKradTestDla3Cyfr() {
+		int oczekiwana = kontrakt.CyfroKrad(137);
+		assertThat(oczekiwana, anyOf(is(13), is(107), is(37)));
+	}
+
+	@Test
 	public void hulajTest() throws NieudanyPsikusException {
 		int oczekiwana = kontrakt.HultajChochla(37);
 		int wynik = 73;
 		assertThat(oczekiwana, is(wynik));
-		System.out.println("test dla 2 cyfr:" + oczekiwana);
 	}
 
 	@Test
@@ -36,7 +50,6 @@ public class KontraktTest {
 		int oczekiwana = kontrakt.HultajChochla(123);
 		// 123=> 132 213 321
 		assertThat(oczekiwana, anyOf(is(132), is(213), is(321)));
-		System.out.println("test dla 3 cyfr:" + oczekiwana);
 	}
 
 	@Test
@@ -47,17 +60,17 @@ public class KontraktTest {
 				oczekiwana,
 				anyOf(is(1243), is(1432), is(4231), is(1324), is(3214),
 						is(2134)));
-		System.out.println("test dla 4 cyfr:" + oczekiwana);
-	}
-
-	@Test (expected = NieudanyPsikusException.class)
-	public void nieudanyPsikus() throws NieudanyPsikusException {
-			kontrakt.HultajChochla(4);
 	}
 
 	@Test(expected = NieudanyPsikusException.class)
-	public void HultajChochlaWyrzucaWyjatek_JednaCyfra() throws NieudanyPsikusException {
-			kontrakt.HultajChochla(2);
+	public void nieudanyPsikus() throws NieudanyPsikusException {
+		kontrakt.HultajChochla(4);
+	}
+
+	@Test(expected = NieudanyPsikusException.class)
+	public void HultajChochlaWyrzucaWyjatek_JednaCyfra()
+			throws NieudanyPsikusException {
+		kontrakt.HultajChochla(2);
 	}
 
 	@Test(expected = NieudanyPsikusException.class)
