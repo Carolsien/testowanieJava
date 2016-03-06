@@ -1,11 +1,8 @@
 package mavenTest.Zadanie23;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.hamcrest.Matchers.lessThan;
-
 import static org.hamcrest.CoreMatchers.*;
 
 import org.junit.After;
@@ -27,25 +24,78 @@ public class KontraktTest {
 	}
 
 	@Test
-	public void czyZwrociArgumentTest() {
+	public void hulajTest() throws NieudanyPsikusException {
+		int oczekiwana = kontrakt.HultajChochla(37);
+		int wynik = 73;
+		assertThat(oczekiwana, is(wynik));
+		System.out.println("test dla 2 cyfr:" + oczekiwana);
+	}
+
+	@Test
+	public void hulajTest3() throws NieudanyPsikusException {
+		int oczekiwana = kontrakt.HultajChochla(123);
+		// 123=> 132 213 321
+		assertThat(oczekiwana, anyOf(is(132), is(213), is(321)));
+		System.out.println("test dla 3 cyfr:" + oczekiwana);
+	}
+
+	@Test
+	public void hulajTest4() throws NieudanyPsikusException {
+		int oczekiwana = kontrakt.HultajChochla(1234);
+		// 1234=> 1243 1432 4231 1324 3214 2134
+		assertThat(
+				oczekiwana,
+				anyOf(is(1243), is(1432), is(4231), is(1324), is(3214),
+						is(2134)));
+		System.out.println("test dla 4 cyfr:" + oczekiwana);
+	}
+
+	@Test
+	public void nieudanyPsikus() throws NieudanyPsikusException {
+		boolean sprawdz = false;
+		try {
+			kontrakt.HultajChochla(4);
+		} catch (NieudanyPsikusException e) {
+			sprawdz = true;
+		}
+		assertTrue(sprawdz);
+	}
+
+	@Test
+	public void HultajChochlaWyrzucaWyjatek_JednaCyfra() {
+		try {
+			kontrakt.HultajChochla(2);
+			fail("Metoda nie dziala");
+		} catch (NieudanyPsikusException e) {
+			assertTrue(true);
+		}
+	}
+
+	@Test(expected = NieudanyPsikusException.class)
+	public void HultajChochlaMaJednaCyfre() throws NieudanyPsikusException {
+		kontrakt.HultajChochla(1);
+	}
+
+	@Test
+	public void NieksztaltekCzyZwrociArgumentTest() {
 		int wartosc = kontrakt.Nieksztaltek(124);
 		assertThat(wartosc, is(124));
 	}
 
 	@Test
-	public void czyZamieniliczbe3Test() {
-		int wartosc = kontrakt.Nieksztaltek(453);
-		assertThat(wartosc, is(458));
+	public void NieksztaltekCzyZamieniliczbe3Test() {
+		int wartosc = kontrakt.Nieksztaltek(345);
+		assertThat(wartosc, is(845));
 	}
 
 	@Test
-	public void czyZamieniliczbe7Test() {
-		int wartosc = kontrakt.Nieksztaltek(874);
-		assertThat(wartosc, is(814));
+	public void NieksztaltekCzyZamieniliczbe7Test() {
+		int wartosc = kontrakt.Nieksztaltek(742);
+		assertThat(wartosc, is(142));
 	}
 
 	@Test
-	public void czyZamieniliczbe6Test() {
+	public void NieksztaltekCzyZamieniliczbe6Test() {
 		int wartosc = kontrakt.Nieksztaltek(624);
 		assertThat(wartosc, is(924));
 	}
@@ -72,6 +122,6 @@ public class KontraktTest {
 
 	@Test
 	public void TititNieJestPodzielneTest() {
-		assertFalse(kontrakt.Titit(10));
+		assertFalse(kontrakt.Titit(8));
 	}
 }

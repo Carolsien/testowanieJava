@@ -6,15 +6,63 @@ public class Kontrakt implements Psikus {
 	public int liczba;
 
 	public Integer CyfroKrad(Integer liczba) {
-		// TODO Auto-generated method stub
-		return null;
+		if (liczba == null)
+			throw new IllegalArgumentException();
+		boolean czyUjemna = false;
+		if (liczba < 0) {
+			czyUjemna = true;
+			liczba = -liczba;
+		}
+		int ileCyfr = liczba.toString().length();
+		if (ileCyfr == 1)
+			return null;
+		Random losowy = new Random();
+		int doUsuniecia = losowy.nextInt(ileCyfr);
+		String wynik = "";
+		for (int i = 0; i < ileCyfr; i++) {
+			if (i != doUsuniecia)
+				wynik += liczba.toString().charAt(i);
+		}
+		liczba = Integer.parseInt(wynik);
+		if (czyUjemna)
+			liczba = -liczba;
+		return liczba;
 	}
 
-	public Integer HultajChochla(Integer liczba) {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer HultajChochla(Integer liczba) throws NieudanyPsikusException {
+		boolean czyUjemna = false;
+		if (liczba < 0) {
+			czyUjemna = true;
+			liczba = -liczba;
+		}
+		int ileCyfr = liczba.toString().length();
+		if (ileCyfr == 1)
+			throw new NieudanyPsikusException();
+		Random losowy = new Random();
+		int doZamiany1 = losowy.nextInt(ileCyfr);
+		int doZamiany2 = losowy.nextInt(ileCyfr);
+		while (doZamiany1 == doZamiany2)
+			doZamiany2 = losowy.nextInt(ileCyfr);
+		String wynik = "";
+		for (int i = 0; i < ileCyfr; i++) {
+			if (i == doZamiany1)
+				wynik += liczba.toString().charAt(doZamiany2);
+			else if (i == doZamiany2)
+				wynik += liczba.toString().charAt(doZamiany1);
+			else
+				wynik += liczba.toString().charAt(i);
+		}
+		liczba = Integer.parseInt(wynik);
+		if (czyUjemna)
+			liczba = -liczba;
+		return liczba;
 	}
 
+	/*
+	 * w zadanej liczbie dokonuje jednej losowej zmiany cyfr według schematu:
+	 * 3→8 7→1 6→9 Gdy powyższe liczby nie występują w liczbie będącej
+	 * argumentem, metoda zwraca argument
+	 */
 	public Integer Nieksztaltek(Integer liczba) {
 		int ileCyfrDoZamiany = 0;
 		for (char cyfra : liczba.toString().toCharArray()) {
