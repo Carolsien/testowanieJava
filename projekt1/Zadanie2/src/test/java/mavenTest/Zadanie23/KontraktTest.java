@@ -35,7 +35,7 @@ public class KontraktTest {
 	@Test
 	public void CyfroKradTestDla3Cyfr() {
 		int oczekiwana = kontrakt.CyfroKrad(137);
-		assertThat(oczekiwana, anyOf(is(13), is(107), is(37)));
+		assertThat(oczekiwana, anyOf(is(130), is(17), is(37)));
 	}
 
 	@Test
