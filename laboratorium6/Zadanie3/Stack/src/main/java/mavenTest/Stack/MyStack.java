@@ -22,10 +22,13 @@ public class MyStack {
 		stack = new ArrayList<Integer>();
 	}
 
+<<<<<<< HEAD
 	public MyStack(List<Integer> list) {
 		stack = list;
 	}
 
+=======
+>>>>>>> 73cce40996692d7bbc7c08170fa78c92575d69e6
 	public boolean IsEmpty() {
 		return stack.size() == 0;
 	}
