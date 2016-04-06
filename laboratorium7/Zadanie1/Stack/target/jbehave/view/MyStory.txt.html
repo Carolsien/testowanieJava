@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>MyStory</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: txt"><![CDATA[
+
+(MyStory.story)
+Scenario: IsEmpty returns true if stack is empty
+Given the empty stack
+Then IsEmpty should be true
+
+Scenario: IsEmpty returns false if stack is not empty
+Examples:
+Given the stack by <list0>
+Then IsEmpty should be false
+
+|list0|
+|1, 2, 9, 10|
+
+Example: {list0=1, 2, 9, 10}
+Given the stack by 1, 2, 9, 10
+Then IsEmpty should be false
+
+
+Scenario: MyPop throws exception
+Given the stack is empty
+And I want to pop item
+Then MyPop throws an exception
+
+Scenario: MyPop works
+Examples:
+Given the stack by <list1>
+Then the top of the stack should be <element1>
+
+|list1|element1|
+|8, 9, 0|9|
+
+Example: {list1=8, 9, 0, element1=9}
+Given the stack by 8, 9, 0
+Then the top of the stack should be 9
+
+
+Scenario: MyPush works
+Examples:
+Given the element by <element2>
+Then the stack should have <element2>
+
+|element2|
+|12|
+
+Example: {element2=12}
+Given the element by 12
+Then the stack should have 12
+
+
+Scenario: MyTop throws an exception
+Given the stack is empty
+Then MyTop should throw an exception
+
+Scenario: MyTop works
+Examples:
+Given a  element by <element3>
+When I want to add element to the stack
+Then MyTop should be <element3>
+
+|element3|
+|10|
+
+Example: {element3=10}
+Given a  element by 10
+When I want to add element to the stack
+Then MyTop should be 10
+
+
+
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
