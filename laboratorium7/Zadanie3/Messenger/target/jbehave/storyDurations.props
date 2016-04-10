@@ -1,0 +1,7 @@
+#org.jbehave.core.embedder.StoryManager
+#Sun Apr 10 14:59:46 CEST 2016
+FailureConnectionStory.story=0
+threads=1
+total=0
+SuccessConnectionStory.story=0
+threadAverage=0

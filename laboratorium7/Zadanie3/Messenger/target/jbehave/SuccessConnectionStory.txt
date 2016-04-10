@@ -1,0 +1,44 @@
+
+(SuccessConnectionStory.story)
+Scenario: 
+Examples:
+Given servers address by <server>
+And good connection
+When connection is tested
+Then result should equal <result>
+
+|server|result|
+|inf.ug.edu.pl|0|
+
+Example: {server=inf.ug.edu.pl, result=0}
+Given servers address by <server> (PENDING)
+And good connection (PENDING)
+When connection is tested (PENDING)
+Then result should equal <result> (PENDING)
+@Given("servers address by <server>")
+@Pending
+public void givenServersAddressByserver() {
+  // PENDING
+}
+
+@Given("good connection")
+@Pending
+public void givenGoodConnection() {
+  // PENDING
+}
+
+@When("connection is tested")
+@Pending
+public void whenConnectionIsTested() {
+  // PENDING
+}
+
+@Then("result should equal <result>")
+@Pending
+public void thenResultShouldEqualresult() {
+  // PENDING
+}
+
+
+
+
