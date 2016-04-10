@@ -1,0 +1,52 @@
+
+(WrongMessageStory.story)
+Scenario: message has wrong format
+Examples:
+Given server address by <server>
+And message by <message>
+When message can be send
+And messenger sends message
+Then the result should be equal <result>
+
+|server|message|result|
+|inf.ug.edu.pl|ab|2|
+
+Example: {server=inf.ug.edu.pl, message=ab, result=2}
+Given server address by <server> (PENDING)
+And message by <message> (PENDING)
+When message can be send (PENDING)
+And messenger sends message (PENDING)
+Then the result should be equal <result> (PENDING)
+@Given("server address by <server>")
+@Pending
+public void givenServerAddressByserver() {
+  // PENDING
+}
+
+@Given("message by <message>")
+@Pending
+public void givenMessageBymessage() {
+  // PENDING
+}
+
+@When("message can be send")
+@Pending
+public void whenMessageCanBeSend() {
+  // PENDING
+}
+
+@When("messenger sends message")
+@Pending
+public void whenMessengerSendsMessage() {
+  // PENDING
+}
+
+@Then("the result should be equal <result>")
+@Pending
+public void thenTheResultShouldBeEqualresult() {
+  // PENDING
+}
+
+
+
+

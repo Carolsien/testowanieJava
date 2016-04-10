@@ -29,7 +29,7 @@ public class RunJBehave extends JUnitStories{
 
 	@Override
 	protected List<String> storyPaths() {
-		return Arrays.asList("SuccessConnectionStory.story", "FailureConnectionStory.story",  "MessageSentStory.story");
+		return Arrays.asList("SuccessConnectionStory.story", "FailureConnectionStory.story", "MessageSentStory.story", "MessageNotSendStory.story", "WrongMessageStory.story");
 	}
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="2.433" errors="0" skipped="0" tests="14" name="com.example.mockdemo.app.MessageAppMockitoTest">
+<testsuite failures="0" time="2.374" errors="0" skipped="0" tests="14" name="com.example.mockdemo.app.MessageAppMockitoTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/devel/jdk1.7.0_40/jre/lib/i386"/>
@@ -59,18 +59,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="2.303" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_CorrectServer_WithoutSuccess"/>
-  <testcase time="0.032" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_WrongServer"/>
-  <testcase time="0.026" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_NullServer_NullMessage"/>
-  <testcase time="0.008" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectServer_NullMessage"/>
-  <testcase time="0.013" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectAll_MessageSent"/>
-  <testcase time="0.004" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_WrongServer_NullMessage"/>
-  <testcase time="0.007" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_WrongServer_WrongMessage"/>
-  <testcase time="0.003" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_NullServer_CorrectMessage"/>
-  <testcase time="0.006" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectAll_MessageNotSent"/>
-  <testcase time="0.009" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_CorrectServer"/>
-  <testcase time="0.005" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectServer_WrongMessage"/>
-  <testcase time="0.007" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_NullServer_WrongMessage"/>
-  <testcase time="0.006" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_WrongServer_CorrectMessage"/>
-  <testcase time="0.004" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_NullServer"/>
+  <testcase time="2.27" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_CorrectServer_WithoutSuccess"/>
+  <testcase time="0.012" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_WrongServer"/>
+  <testcase time="0.02" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_NullServer_NullMessage"/>
+  <testcase time="0.009" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectServer_NullMessage"/>
+  <testcase time="0.01" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectAll_MessageSent"/>
+  <testcase time="0.006" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_WrongServer_NullMessage"/>
+  <testcase time="0.005" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_WrongServer_WrongMessage"/>
+  <testcase time="0.007" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_NullServer_CorrectMessage"/>
+  <testcase time="0.007" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectAll_MessageNotSent"/>
+  <testcase time="0.004" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_CorrectServer"/>
+  <testcase time="0.007" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_CorrectServer_WrongMessage"/>
+  <testcase time="0.008" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_NullServer_WrongMessage"/>
+  <testcase time="0.004" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="checkSendingMessage_WrongServer_CorrectMessage"/>
+  <testcase time="0.005" classname="com.example.mockdemo.app.MessageAppMockitoTest" name="testConnection_NullServer"/>
 </testsuite>

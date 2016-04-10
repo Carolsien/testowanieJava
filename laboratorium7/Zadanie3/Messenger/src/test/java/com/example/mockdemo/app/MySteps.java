@@ -60,5 +60,8 @@ public class MySteps extends Steps{
 		ms.setMessageSent(true);
 	}
 
-
+	@When("message cannot be send")
+	public void whenMessageCanNotBeSend(){
+		ms.setMessageSent(false);
+	}
 }

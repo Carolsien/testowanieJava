@@ -1,7 +1,10 @@
 #org.jbehave.core.embedder.StoryManager
-#Sun Apr 10 14:59:46 CEST 2016
+#Sun Apr 10 16:07:18 CEST 2016
+MessageNotSendStory.story=0
+MessageSentStory.story=0
 FailureConnectionStory.story=0
 threads=1
 total=0
 SuccessConnectionStory.story=0
 threadAverage=0
+WrongMessageStory.story=0

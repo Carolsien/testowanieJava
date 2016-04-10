@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.13" errors="0" skipped="0" tests="13" name="com.example.mockdemo.app.MessageAppTest">
+<testsuite failures="0" time="0.125" errors="0" skipped="0" tests="13" name="com.example.mockdemo.app.MessageAppTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/devel/jdk1.7.0_40/jre/lib/i386"/>
@@ -59,17 +59,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.06" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageCorrectServerWrongMessage"/>
-  <testcase time="0.029" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageNotSent"/>
+  <testcase time="0.062" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageCorrectServerWrongMessage"/>
+  <testcase time="0.019" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageNotSent"/>
   <testcase time="0.003" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionWrongServerWithConnection"/>
   <testcase time="0.003" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionCorrectServerWithConnection"/>
   <testcase time="0.006" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageNullServerNullMessage"/>
   <testcase time="0.008" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionNullServerWithConnection"/>
   <testcase time="0.006" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageNullServerCorrectMessage"/>
-  <testcase time="0.006" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageCorrectServerNullMessage"/>
-  <testcase time="0.004" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionNullServerNoConnection"/>
-  <testcase time="0.001" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionCorrectServerNoConnection"/>
-  <testcase time="0.003" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageSent"/>
+  <testcase time="0.003" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageCorrectServerNullMessage"/>
+  <testcase time="0.008" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionNullServerNoConnection"/>
+  <testcase time="0.005" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionCorrectServerNoConnection"/>
+  <testcase time="0" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageSent"/>
   <testcase time="0.001" classname="com.example.mockdemo.app.MessageAppTest" name="sendMessageNullServerWrongMessage"/>
-  <testcase time="0" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionWrongServerNoConnection"/>
+  <testcase time="0.001" classname="com.example.mockdemo.app.MessageAppTest" name="testConnectionWrongServerNoConnection"/>
 </testsuite>
