@@ -1,9 +1,0 @@
-#org.jbehave.core.embedder.StoryManager
-#Tue Apr 12 21:22:38 CEST 2016
-threads=1
-total=0
-MyTopStory.story=0
-threadAverage=0
-IsEmptyStory.story=0
-MyPopStory.story=0
-MyPushStory.story=0
