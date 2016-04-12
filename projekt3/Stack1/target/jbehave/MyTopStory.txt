@@ -1,0 +1,23 @@
+
+(MyTopStory.story)
+Scenario: MyTop throws an exception
+Given the stack is empty
+Then MyTop should throw an exception
+
+Scenario: MyTop works
+Examples:
+Given a  element by <element>
+When I want to add element to the stack
+Then MyTop should be <element>
+
+|element|
+|10|
+
+Example: {element=10}
+Given a  element by 10
+When I want to add element to the stack
+Then MyTop should be 10 (FAILED)
+(java.lang.RuntimeException: Error)
+
+
+
