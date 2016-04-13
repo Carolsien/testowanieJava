@@ -1,9 +1,9 @@
 Scenario: message is not sent
-Given servers address by <server>
+Given server address by <server>
 And message by <message>
 When message cannot be send
-And messenger sends message
-Then the result should be equal <result>
+And messager sends message
+Then result should equal <result>
 
 Examples:
 |server|message|result|

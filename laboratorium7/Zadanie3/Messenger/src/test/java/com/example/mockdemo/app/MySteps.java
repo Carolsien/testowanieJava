@@ -1,4 +1,6 @@
 package com.example.mockdemo.app;
+import junit.framework.Test;
+
 import org.jbehave.core.annotations.*;
 import org.jbehave.core.steps.Steps;
 
@@ -20,7 +22,7 @@ public class MySteps extends Steps{
 		server = null;
 	}
 	
-	@Given("servers address by $server")
+	@Given("server address by $server")
 	public void givenServersAddressByserver(String server){
 		 this.server = server;
 	}
@@ -52,7 +54,7 @@ public class MySteps extends Steps{
 	
 	@When("messager sends message")
 	public void whenMessengerSendsMessage(){
-		ms.setMessageSent(true);
+		result = msn.sendMessage(server, message);
 	}
 	
 	@When("message can be send")

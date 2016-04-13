@@ -18,12 +18,12 @@ public class RunJBehave extends JUnitStories{
 	public RunJBehave(){
 		super();
 	}
-	
+	@Override
 	public Configuration configuration(){
 		return new MostUsefulConfiguration().useStoryLoader(new LoadFromClasspath()).useStoryReporterBuilder(new StoryReporterBuilder().withDefaultFormats().withFormats(Format.CONSOLE, Format.TXT));
 	}
-	
-	public InjectableStepsFactory stepFactory(){
+	@Override
+	public InjectableStepsFactory stepsFactory(){
 		return new InstanceStepsFactory(configuration(), new MySteps());
 	}
 

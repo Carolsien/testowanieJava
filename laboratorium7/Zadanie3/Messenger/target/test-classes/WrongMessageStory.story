@@ -2,8 +2,8 @@ Scenario: message has wrong format
 Given server address by <server>
 And message by <message>
 When message can be send
-And messenger sends message
-Then the result should be equal <result>
+And messager sends message
+Then result should equal <result>
 
 Examples:
 |server|message|result|

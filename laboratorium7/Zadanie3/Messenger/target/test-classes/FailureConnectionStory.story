@@ -1,5 +1,5 @@
 Scenario: servers address with bad connection
-Given servers address by <server>
+Given server address by <server>
 And bad connection
 When connection is tested
 Then result should equal <result>
