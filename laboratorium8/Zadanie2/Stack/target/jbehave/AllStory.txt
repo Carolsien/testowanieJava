@@ -1,0 +1,44 @@
+GivenStories: MyPopStory.story, MyPushStory.story
+(AllStory.story)
+GivenStories:
+MyPopStory.story 
+MyPushStory.story 
+
+
+(MyPopStory.story)
+Scenario: MyPop throws exception
+Given the stack is empty
+And I want to pop item
+Then MyPop throws an exception
+
+
+
+(MyPushStory.story)
+Scenario: MyPush works
+Examples:
+Given the element by <element>
+Then the stack should have <element>
+
+|element|
+|12|
+
+Example: {element=12}
+Given the element by 12
+Then the stack should have 12
+
+
+
+Scenario: IsEmpty returns false if stack is not empty
+Examples:
+Given the stack by <list>
+Then IsEmpty should be false
+
+|list|
+|1, 2, 9, 10|
+
+Example: {list=1, 2, 9, 10}
+Given the stack by 1, 2, 9, 10
+Then IsEmpty should be false
+
+
+
