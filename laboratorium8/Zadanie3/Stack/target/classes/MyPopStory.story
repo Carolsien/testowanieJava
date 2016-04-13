@@ -1,0 +1,5 @@
+
+Scenario: MyPop throws exception
+Given the stack is empty
+And I want to pop item
+Then MyPop throws an exception
