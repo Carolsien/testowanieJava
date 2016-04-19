@@ -1,0 +1,4 @@
+Scenariusz: IsEmpty returns true if stack is empty
+Zakładając the empty stack
+Wtedy IsEmpty should be true
+
