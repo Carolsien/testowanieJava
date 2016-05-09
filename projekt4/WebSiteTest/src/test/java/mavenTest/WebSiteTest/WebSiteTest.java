@@ -1,5 +1,7 @@
 package mavenTest.WebSiteTest;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -29,14 +31,11 @@ public class WebSiteTest {
 	public void CorrectLoginTest(){
 		driver.get("http://www.bitbucket.org");
 		driver.findElement(By.linkText("Log in")).click();
-		
-		WebElement name = driver.findElement(By.name("username"));
-		name.sendKeys("karolina.rostek.93@gmail.com");
-		
-		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys("");
-		password.submit();
+		Login login = new Login(driver);
+		login.login("karolina.rostek.93@gmail.com", "");
+		assertEquals("krostek / home — Bitbucket", driver.getTitle());
 	}
+	
 	
 	@Test
 	public void CreateRepositoryTest(){
