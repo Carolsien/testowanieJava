@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="159.904" errors="0" skipped="0" tests="6" name="mavenTest.WebSiteTest.WebSiteTest">
+<testsuite failures="0" time="153.635" errors="0" skipped="0" tests="7" name="mavenTest.WebSiteTest.WebSiteTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/devel/jdk1.7.0_40/jre/lib/i386"/>
@@ -59,10 +59,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="28.354" classname="mavenTest.WebSiteTest.WebSiteTest" name="Logout"/>
-  <testcase time="40.881" classname="mavenTest.WebSiteTest.WebSiteTest" name="RenameRepositoryTest"/>
-  <testcase time="28.198" classname="mavenTest.WebSiteTest.WebSiteTest" name="FindRepositoryTest"/>
-  <testcase time="32.457" classname="mavenTest.WebSiteTest.WebSiteTest" name="CreateRepositoryTest"/>
-  <testcase time="14.081" classname="mavenTest.WebSiteTest.WebSiteTest" name="CorrectLoginTest"/>
-  <testcase time="15.933" classname="mavenTest.WebSiteTest.WebSiteTest" name="CreateExistingRepositoryTest"/>
+  <testcase time="26.778" classname="mavenTest.WebSiteTest.WebSiteTest" name="Logout"/>
+  <testcase time="38.349" classname="mavenTest.WebSiteTest.WebSiteTest" name="RenameRepositoryTest"/>
+  <testcase time="28.859" classname="mavenTest.WebSiteTest.WebSiteTest" name="FindRepositoryTest"/>
+  <testcase time="22.609" classname="mavenTest.WebSiteTest.WebSiteTest" name="CreateRepositoryTest"/>
+  <testcase time="12.448" classname="mavenTest.WebSiteTest.WebSiteTest" name="InCorrectLoginTest"/>
+  <testcase time="11.38" classname="mavenTest.WebSiteTest.WebSiteTest" name="CorrectLoginTest"/>
+  <testcase time="13.212" classname="mavenTest.WebSiteTest.WebSiteTest" name="CreateExistingRepositoryTest"/>
 </testsuite>

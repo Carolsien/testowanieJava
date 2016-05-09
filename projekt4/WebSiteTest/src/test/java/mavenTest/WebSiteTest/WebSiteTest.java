@@ -15,6 +15,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.thoughtworks.selenium.DefaultSelenium;
 
 
 public class WebSiteTest {
@@ -36,13 +41,39 @@ public class WebSiteTest {
 		assertEquals("krostek / home — Bitbucket", driver.getTitle());
 	}
 	
+	@Test
+	public void InCorrectLoginTest(){
+		String parentWindow;
+		String childWindow;
+		driver.get("http://www.bitbucket.org");
+		parentWindow = driver.getWindowHandle();
+		Actions newTab = new Actions(driver);
+		WebElement link = driver.findElement(By.linkText("Log in"));
+		newTab.contextClick(link).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+		driver.switchTo().window(parentWindow);
+		driver.close();
+		driver.switchTo().window(driver.getWindowHandles().iterator().next());
+		
+		WebElement name = driver.findElement(By.name("username"));
+		name.sendKeys("asdasdasd@gmail.com");
+		
+		WebElement password = driver.findElement(By.name("password"));
+		password.sendKeys("aaaaaa1");
+		password.submit();
+		
+		List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + "Invalid username/email or password." + "')]"));
+		Assert.assertTrue("Text not found!", list.size() > 0);
+	}
+	
 	
 	@Test
 	public void CreateRepositoryTest(){
 		CorrectLoginTest();
 		Date date = new Date();
 		driver.findElement(By.linkText("Repositories")).click();
-		driver.findElement(By.linkText("Create repository")).click();
+		WebElement create = (new WebDriverWait(driver, 10))
+				  .until(ExpectedConditions.presenceOfElementLocated(By.linkText("Create repository")));	
+		create.click();
 		
 		WebElement repositoryname = driver.findElement(By.id("id_name"));
 		repositoryname.sendKeys("TestRepo" + date);

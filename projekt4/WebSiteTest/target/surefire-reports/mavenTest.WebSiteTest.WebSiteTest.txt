@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: mavenTest.WebSiteTest.WebSiteTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 166.123 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 161.79 sec
